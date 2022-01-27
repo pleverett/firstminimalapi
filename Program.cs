@@ -4,9 +4,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.UseContactsApi();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => {
+builder.Services.AddSwaggerGen(c =>
+{
   c.SwaggerDoc("v1",
-  new() {Title="Paul's Contacts API", Version="v1"});
+  new() { Title = "Paul's Contacts API", Version = "v1" });
 });
 
 var app = builder.Build();
